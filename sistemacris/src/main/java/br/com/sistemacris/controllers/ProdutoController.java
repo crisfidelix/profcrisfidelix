@@ -35,4 +35,10 @@ package br.com.sistemacris.controllers;
 	return ResponseEntity.notFound().build();
 	}
 
+	
+	@PostMapping("/produto/novo")
+	
+	public ResponseEntity<produto> inserirProduto(@RequestBody Produto prodservico.novoProduto(produto);
+	return ResponseEntity.ok(produto);
+	}
 }

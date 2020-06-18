@@ -5,6 +5,8 @@ package br.com.sistemacris.services;
 	import org.springframework.stereotype.Component;
 	import br.com.sistemacris.DAO.produtoRepo;
 	import com.examplbr.gamae.sistemacris.model.produto;
+	
+	
 	@Component
 	public class ProdutoServiceImpl implements IProdutoService {
 		
@@ -27,4 +29,11 @@ package br.com.sistemacris.services;
 		}
 		
 
+		@Override
+		public void novoProduto(produto produto) {
+		repo.save(produto);
+		}
+		
+		
+		
 }
