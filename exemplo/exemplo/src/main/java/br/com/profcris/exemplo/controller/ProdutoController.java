@@ -10,8 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.profcris.exemplo.dao.ProdutoDAO;
 import br.com.profcris.exemplo.model.Produto;
 
-@RestController
-@CrossOrigin("*")
+@RestController // o controller é declarado com esta anotação
+@CrossOrigin("*") //permite acesso através do @CrossOrigin("*") e injeta
+                  //uma dependência do serviço através do @Autowired .
+
+
 
 public class ProdutoController {
 	

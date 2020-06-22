@@ -14,6 +14,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Table(name="tbl_produto")
 
 public class Produto {
+	public Produto(int id, String nome, float preco){
+		   this.id = id;
+		   this.nome = nome;
+		   this.preco = preco;
+		   
+	}
+	
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
@@ -31,26 +39,32 @@ public class Produto {
 	@ManyToOne
 	private Departamento depto;
 
+	@SuppressWarnings("unused")
 	private int getId() {
 		return id;
 	}
 
+	@SuppressWarnings("unused")
 	private void setId(int id) {
 		this.id = id;
 	}
 
+	@SuppressWarnings("unused")
 	private String getNome() {
 		return nome;
 	}
 
+	@SuppressWarnings("unused")
 	private void setNome(String nome) {
 		this.nome = nome;
 	}
 
+	@SuppressWarnings("unused")
 	private float getPreco() {
 		return preco;
 	}
 
+	@SuppressWarnings("unused")
 	private void setPreco(float preco) {
 		this.preco = preco;
 	}
